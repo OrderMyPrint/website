@@ -68,6 +68,12 @@ This document covers behaviour and state machines. Screen-level detail lives in 
    - **Failures** (wrong type, infected, corrupt, over the size limit) block.
 5. Copy states that checks are basic and that pre-press staff review every file. It never promises print quality.
 
+### 1.3a Guided artwork upload
+- Slots come from the product's artwork-slot config and the selected options (e.g. printing sides, print locations).
+- Each slot shows: slot tabs with status, the print area guide (trim, bleed, safe area, folds, cut line, no-print zones, garment print area), template downloads, upload, placement setting (preview only), and a file checklist.
+- CDR files: no automatic preview → manual review notice.
+- Missing required slots: warning; upload after checkout allowed where the product permits.
+
 ### 1.4 Cart
 - Line items with:
   - configuration summary;
@@ -83,7 +89,7 @@ This document covers behaviour and state machines. Screen-level detail lives in 
 - On entering checkout, the cart is re-priced (see catalogue doc §4.4).
 
 ### 1.5 Checkout
-1. Contact details: email and phone. Sign-in is optional; guest checkout is on [P].
+1. **Verify mobile (OTP)**: enter mobile number → receive 6-digit OTP by SMS → verified number signs in, or creates the account. Name required; email optional. (Replaces guest checkout — X-09.)
 2. Billing and shipping addresses (India PIN validation). Optional **GSTIN** and company name for a B2B invoice.
 3. Delivery method (when configured).
 4. Review: final server price including GST and shipping, policy acknowledgement, and the artwork-pending notice where applicable.
@@ -98,6 +104,13 @@ This document covers behaviour and state machines. Screen-level detail lives in 
    - **success** → confirmation;
    - **failure or cancel** → retry or change method; the order is kept in `awaiting_payment`;
    - **pending or timeout** → "We're confirming your payment" message, and reconciliation continues in the background.
+
+### 1.5a Customer sign-in (mobile + OTP)
+- Enter 10-digit Indian mobile (+91 fixed) → `POST /auth/otp/request`.
+- 6-digit OTP, valid 10 min, resend after 30 s, 3 attempts then 15-min lock (admin-configurable). SMS autofill via `autocomplete="one-time-code"`.
+- `POST /auth/otp/verify` → session cookie; first verification creates the user; optional first-time details (name, email).
+- States: SMS failed, wrong code, expired, too many attempts.
+- Change of number requires OTP on old and new numbers (or support).
 
 ### 1.6 Customer account
 - Dashboard: active orders, actions needed (artwork revisions, quotes awaiting response).

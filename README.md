@@ -2,7 +2,7 @@
 
 This repository is the **documentation and architecture source of truth** for the Order My Print custom-printing e-commerce platform. Application code lives in separate repositories, created in Phase 2 after approval (no monorepo).
 
-**Current phase:** Phase 1 — Figma design. Status: **IN PROGRESS** (G0 approved 2026-10-23).
+**Current phase:** Phase 1 — Figma design. Status: **READY FOR REVIEW** (gate G1). Figma: https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy
 
 ## Read first
 - `docs/discovery/phase-0-discovery-report.md`: discovery summary and the decisions needed.

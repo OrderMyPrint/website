@@ -47,7 +47,8 @@ staff_roles ─< role_permissions ; users ─< user_roles
 ### Identity & accounts
 | Table | Key columns |
 |---|---|
-| `users` | id, email (unique, citext), phone, name, password_hash, kind (`customer`/`staff`), totp_secret_enc, email_verified_at, archived_at |
+| `users` | id, phone_e164 (unique; customer sign-in), email (optional, citext), name, password_hash (staff only), kind (`customer`/`staff`), totp_secret_enc (staff), phone_verified_at, archived_at |
+| `otp_challenges` | id, phone_e164, code_hash, purpose (`signin`/`phone_change`), expires_at, attempts, locked_until, sent_via, provider_message_id, created_at |
 | `companies` | id, legal_name, gstin (nullable, unique), billing_address_id, credit_terms_days (nullable), credit_approved_by, credit_approved_at |
 | `company_members` | company_id, user_id, role (`admin`/`member`) — PK (company_id, user_id) |
 | `addresses` | id, owner_user_id or company_id, line1, line2, city, state_code, pin_code, phone, is_default_shipping, is_default_billing |
@@ -62,6 +63,7 @@ staff_roles ─< role_permissions ; users ─< user_roles
 | `options` | id, option_group_id, key, label, description, media, sort, is_available, metadata jsonb |
 | `product_variants` | id, product_id, sku, preset_config jsonb (for curated presets, e.g. "Standard 350 GSM matte") |
 | `product_constraints` | id, product_id, rule jsonb (structured: `requires`, `excludes`, `range`), message |
+| `product_artwork_slots` | id, product_id, key (e.g. `front`, `back`, `left_chest`, `outside`), label, required_rule jsonb (when required), print_area jsonb (w, h, unit, varies_by), bleed_mm, safe_mm, no_print_zones jsonb, fold_lines jsonb, accepted_types text[], max_mb, template_files jsonb, guide_key |
 | `tax_profiles` | id, name, hsn_sac, gst_rate NUMERIC(5,2), effective_from — **values supplied by the business** |
 
 ### Pricing

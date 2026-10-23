@@ -93,11 +93,23 @@ Acceptance criteria use Given / When / Then. Release: **R1** = MVP, **L** = late
 
 **ART-05 (L).** Advanced preflight (bleed, fonts, colour profile) reports.
 
+**ART-06 (R1).** As a shopper, I see one upload slot per side/panel/print location, each with its printable area guide for my selected options.
+- Changing garment type, size or print location updates the guide (e.g. polo left chest 9 × 9 cm).
+- Templates (PDF/AI/CDR) are downloadable per slot.
+- Required slots without files show a warning; I can upload after checkout where allowed.
+
+## Sign-in (customers)
+
+**AUTH-01 (R1).** I sign in with my mobile number and a 6-digit OTP; no password exists.
+**AUTH-02 (R1).** A wrong OTP shows remaining attempts; after the limit, sign-in for that number pauses for the configured time.
+**AUTH-03 (R1).** An expired OTP can be re-requested after the resend cooldown.
+**AUTH-04 (R1).** My first verification creates my account; email is optional.
+
 ## Cart & checkout
 
 **CRT-01 (R1).** My guest cart persists for the configured period and merges into my account on sign-in, without duplicate lines.
 
-**CHK-01 (R1).** I can check out as a guest with email and phone, and optionally enter a GSTIN for a B2B invoice.
+**CHK-01 (R1).** I verify my mobile number with an OTP at checkout (this signs me in or creates my account), add my name, optionally an email, and optionally a GSTIN for a B2B invoice.
 - The GSTIN format is validated.
 - The GSTIN state code drives place-of-supply logic.
 

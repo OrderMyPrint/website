@@ -26,7 +26,7 @@ Conventions:
 |---|---|---|---|
 | GET | `/catalogue/categories` | public | Category tree |
 | GET | `/catalogue/products?category=&q=&facets=` | public | Listing, search and facets |
-| GET | `/catalogue/products/{slug}` | public | Product with option schema, constraints hints, artwork requirements |
+| GET | `/catalogue/products/{slug}` | public | Product with option schema, constraint hints, artwork slots (print area, bleed, safe area, no-print zones, templates) |
 | POST | `/pricing/preview` | public (rate-limited) | `{productId, config}` → `{valid, errors[], breakdown, tiers[], turnaround}` |
 | POST | `/artwork/uploads` | public (cart/quote token) or own | Create upload slot → pre-signed URL + limits |
 | POST | `/artwork/uploads/{id}/complete` | same | Start scan and validation |
@@ -46,7 +46,11 @@ Conventions:
 | POST | `/me/quotations/{id}/accept` **[I]** | own | Accept current revision → creates order |
 | POST | `/me/quotations/{id}/decline` | own | With reason |
 | POST | `/me/quotations/{id}/messages` | own | Clarification thread |
-| POST | `/auth/register`, `/auth/login`, `/auth/logout`, `/auth/password/*`, `/auth/verify-email` | — | Identity |
+| POST | `/auth/otp/request` | public (rate-limited per number + IP) | Send 6-digit OTP to +91 mobile |
+| POST | `/auth/otp/verify` | public | Verify OTP → session cookie; creates user on first verify |
+| POST | `/auth/logout` | own | End session |
+| POST | `/me/phone/change` | own + OTP on old and new | Change sign-in number |
+| POST | `/admin/auth/login`, `/admin/auth/totp` | staff | Staff email + password + TOTP |
 | GET/PATCH | `/me`, `/me/addresses`, `/me/company` | own | Profile |
 
 ## Webhooks

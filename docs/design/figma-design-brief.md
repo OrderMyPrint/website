@@ -83,7 +83,8 @@ Admin (separate app): Overview · Catalogue · Pricing · Orders · Quotations �
 | `02 — Foundations & Design Tokens` | Variables: colour (light; dark later), type scale, spacing, radii, elevation, grid, breakpoints, motion, iconography |
 | `03 — Components` | Full component library with variants and states (§7) |
 | `04 — Storefront Desktop` | All storefront screens at 1440 |
-| `05 — Storefront Mobile` | All storefront screens at 390; tablet 834 where the layout changes |
+| `05 — Storefront Mobile` | All storefront screens at 390 |
+| `05A — Storefront Tablet` | Key storefront screens at 834 (added at the Director's request, 2026-10-23) |
 | `06 — Product Configuration` | Seven configurators, desktop + mobile, with all option and validation states |
 | `07 — Cart & Checkout` | Cart states, checkout steps, payment success/failure/pending, confirmation |
 | `08 — Bulk Quotations` | Request form, confirmation, quote detail, accept/decline/clarify, expired |
@@ -117,7 +118,7 @@ Admin (separate app): Overview · Catalogue · Pricing · Orders · Quotations �
 | SF-ACC-05 | Quotations list | ✓ | ✓ | empty |
 | SF-ACC-06 | Quotation detail (accept / decline / clarify thread) | ✓ | ✓ | expired, accepted |
 | SF-ACC-07 | Addresses & GST details, company, profile | ✓ | ✓ | — |
-| SF-AUTH-01…03 | Sign in, register, reset password | ✓ | ✓ | errors |
+| SF-AUTH-01…04 | Mobile number → OTP verify → OTP error states → first-time details (no passwords; X-09) | ✓ | ✓ | wrong / expired / locked / SMS failed |
 | SF-QUO-01 | Bulk quote request (multi-item) | ✓ | ✓ | validation |
 | SF-QUO-02 | Quote request confirmation | ✓ | ✓ | — |
 | SF-HELP-01 | FAQ | ✓ | ✓ | — |

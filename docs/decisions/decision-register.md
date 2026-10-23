@@ -21,7 +21,7 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 
 | ID | Decision | Proposed default | Needed by | Status |
 |---|---|---|---|---|
-| D-11 | Guest checkout | Enabled | Phase 1 | DECIDED (G0, 2026-10-23) |
+| D-11 | Guest checkout | ~~Enabled~~ **Superseded by X-09** (mobile + OTP verification at checkout; carts still work before sign-in) | Phase 1 | SUPERSEDED (2026-10-23) |
 | D-12 | Artwork timing | "Upload now" or "after checkout", default per product; production blocked until approved | Phase 1 | DECIDED (G0, 2026-10-23) |
 | D-13 | Cash on delivery | **Not offered** (made-to-order risk) | Phase 1 | DECIDED (G0, 2026-10-23) |
 | D-14 | Corporate credit terms in R1 | Manual flag per company (net days), approved by finance; no credit limits or statements until later | Phase 1 | DECIDED (G0, 2026-10-23) |
@@ -46,6 +46,8 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 | D-21 | Domain / subdomains | Phase 8 | Not chosen; nothing registered |
 | D-22 | Invoice point (on payment vs on dispatch), numbering series, e-invoicing applicability | Phase 3 | CA |
 | D-23 | Price-hold window for carts | Phase 3 | e.g. 24 h |
+| D-25 | SMS provider for OTP (+ TRAI DLT sender ID and template registration) | Phase 6 | Required for launch; compare cost, delivery rates, DLT support. **None selected** |
+| D-26 | Lottie animations: custom brand animations vs licensed library assets | Phase 4 | Slots marked in Figma; licences recorded per asset |
 | D-24 | CorelDRAW version(s) used by pre-press | Phase 1 | Sets which CDR versions the upload guidance says are supported |
 
 ## Decided
@@ -57,6 +59,9 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 | X-03 | INR, India, English (i18n-ready) | Master brief §1 |
 | X-04 | Seven product families in four categories; no packaging products | Master brief §2–3 |
 | X-05 | Server-authoritative, data-driven pricing with snapshots | Master brief §2 |
+| X-11 | Tablet (834 px) designs added alongside desktop and mobile | Director, 2026-10-23 |
+| X-10 | Guided artwork upload per product: one slot per side/panel/print location with printable area, bleed, safe area and no-print zones shown; templates per slot | Director, 2026-10-23 |
+| X-09 | Customer sign-in = mobile number + OTP only (no email/password). Email optional for invoices. Staff admin keeps email + password + TOTP 2FA | Director, 2026-10-23 |
 | X-08 | G0 approved: D-01 (a) working brand Order My Print + OMP logo; D-03 Direction A; defaults D-11…D-20 | Director, 2026-10-23 (`docs/approvals/G0-discovery-approval.md`) |
 | X-07 | Accept CorelDRAW (CDR) artwork uploads; manual pre-press review in R1 | Director, 2026-10-23 |
 | X-06 | Git remote `https://github.com/OrderMyPrint/website.git` connected to `/Users/rutvijpatel/OrderMyPrint` | Director instruction, 2026-10-23 |

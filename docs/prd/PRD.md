@@ -44,7 +44,7 @@ Orders then move through artwork review, production, quality control, dispatch a
 
 | Persona | Needs | Primary flows |
 |---|---|---|
-| **Individual** [C] | Small runs, simple choices, fast checkout | Browse → configure → upload → pay (guest allowed [P]) |
+| **Individual** [C] | Small runs, simple choices, fast checkout | Browse → configure → upload → verify mobile (OTP) → pay |
 | **Small business** [C] | Visiting cards, letterheads, stickers; reorders; GST invoice | Direct purchase, account, GSTIN on invoice |
 | **Marketing agency** [C] | Many jobs for many clients, repeat specs, artwork revisions | Account, order history, multi-item quotes |
 | **Corporate procurement** [C] | Bulk T-shirts/stationery, formal quotations, PO reference, credit terms, GST invoices | Bulk quote → accept → order; company account |
@@ -125,6 +125,20 @@ The backend price is authoritative. Every order keeps an immutable snapshot of i
 - Advanced preflight (bleed, DPI, fonts, colour profiles) is a later phase [C].
 - Copy must never imply that validation guarantees print quality [C].
 
+### 4.4a Customer identity [C, Director 2026-10-23]
+
+- Customers sign in with an **Indian mobile number + 6-digit OTP only**. No email/password.
+- First OTP verification creates the account; checkout's first step verifies the mobile number.
+- Email is optional (invoices and order emails only).
+- Staff use a separate admin login: email + password + mandatory TOTP 2FA.
+- Dependency: SMS provider + TRAI DLT sender/template registration (D-25).
+
+### 4.4b Guided artwork upload [C, Director 2026-10-23]
+
+- Each product defines **artwork slots** (sides, panels, print locations) in admin. Each slot has a printable area, bleed, safe area, fold lines and no-print zones (e.g. envelope window, polo placket).
+- The storefront shows the matching **print area guide** for the selected options (e.g. T-shirt type, colour and print location) beside the upload, plus a placement preview and downloadable templates (PDF/AI/CDR).
+- Examples: visiting card front/back; brochure outside/inside panels; T-shirt front/back/left chest/sleeve.
+
 ### 4.5 Markets and localisation
 
 | Item | Requirement |
@@ -144,7 +158,10 @@ The backend price is authoritative. Every order keeps an immutable snapshot of i
 - PDP configurator for all seven products.
 - Live price preview with tier table and breakdown.
 - Artwork upload with validation states.
-- Cart (guest and signed-in).
+- Cart (before and after sign-in; merged on OTP sign-in).
+- Mobile + OTP sign-in (customers).
+- Guided artwork upload with print area guides per slot.
+- Responsive storefront: desktop, tablet (834) and mobile (390).
 - Checkout with one payment gateway.
 - Order confirmation.
 - Order tracking.
