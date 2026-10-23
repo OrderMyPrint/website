@@ -1,0 +1,27 @@
+# Order My Print — Architecture & Documentation
+
+This repository is the **documentation and architecture source of truth** for the Order My Print custom-printing e-commerce platform. Application code lives in separate repositories, created in Phase 2 after approval (no monorepo).
+
+**Current phase:** Phase 0 — Discovery. Status: **READY FOR REVIEW** (gate G0).
+
+## Read first
+- `docs/discovery/phase-0-discovery-report.md`: discovery summary and the decisions needed.
+- `docs/roadmap/phase-plan.md`: phase tracker and gates.
+- `docs/decisions/decision-register.md`: open and decided decisions.
+
+## Contents
+| Folder | Purpose |
+|---|---|
+| `docs/prd/` | PRD, functional spec, user stories, feature matrix, catalogue & pricing model |
+| `docs/research/` | Reference-site audit |
+| `docs/architecture/` | Architecture, data model, API outline |
+| `docs/decisions/` | ADRs and decision register |
+| `docs/design/` | Figma design brief and screen inventory |
+| `docs/roadmap/` | Phase plan |
+| `docs/approvals/` | Gate approval records |
+| `docs/brand/supplied/` | Brand assets exactly as supplied (never modify) |
+
+## Working rules
+- DESIGN FIRST → APPROVAL → IMPLEMENTATION → TESTING → DEPLOYMENT APPROVAL.
+- No invented business facts, prices, integrations or test results; demo data is marked **DEMO**.
+- No secrets in this repository.
