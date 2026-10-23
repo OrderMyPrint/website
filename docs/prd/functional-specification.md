@@ -140,7 +140,8 @@ This document covers behaviour and state machines. Screen-level detail lives in 
 
 | Module | Key functions |
 |---|---|
-| Overview | KPIs (orders by state, quotes awaiting action, artwork queue, jobs due, revenue), exception lists |
+| Overview | KPIs (orders by state, quotes awaiting action, artwork queue, jobs due, revenue), exception lists, mini order map |
+| Order map & flow | Map of active orders by delivery city/PIN (markers coloured by status, sized by count), dispatch routes from the hub, filters (period, product, status), by-state counts, shipment exceptions, and an order-flow strip (Placed → Paid → Artwork → Production → QC → Ready → In transit → Delivered) with stuck/at-risk counts. Map tiles from an India-compliant provider (D-27); coordinates from PIN-code geocoding |
 | Catalogue | Categories, products, option groups and values, constraints, media, SEO fields, artwork requirements, turnaround, tax profile, visibility |
 | Pricing | Pricing versions (draft/published/archived), matrix editor + CSV import, component rates, tiers, minimums, surcharges, effective dates, **preview/test bench**, diff between versions |
 | Orders | List with filters, detail (items, snapshots, payments, artwork, jobs, shipments, invoices, timeline), hold/cancel with reason, notes |

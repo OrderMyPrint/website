@@ -22,11 +22,11 @@
 | [07 — Cart & Checkout](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy?node-id=4-8) | Cart, empty cart, checkout (OTP → address & GST → delivery → review), payment confirming / failed, confirmation; mobile set | 15 |
 | [08 — Bulk Quotations](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy?node-id=4-9) | Request (multi-item), received, list, detail with thread, accept dialog, expired; mobile request + detail | 8 |
 | [09 — Customer Account & Tracking](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy?node-id=4-10) | Dashboard, orders, order detail (partial dispatch), artwork revision, profile/addresses/GST/company; mobile set | 8 |
-| [10 — Admin Dashboard](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy?node-id=4-11) | Staff sign-in + TOTP, step-up modal, overview | 3 |
+| [10 — Admin Dashboard](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy?node-id=4-11) | Staff sign-in + TOTP, step-up modal, overview (with mini order map), **Order map & flow** | 4 |
 | [11 — Admin Operations](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy?node-id=4-12) | Products, product editor, options & constraints, artwork slots & print areas, pricing versions/editor/test bench, orders, order detail, quote pipeline/editor, artwork queue/review, production board, job card, QC, shipments, customers, company/credit, payments, refunds, invoices, coupons, reports, staff & roles, settings, audit log | 28 |
 | [12 — Prototypes & User Flows](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy?node-id=4-13) | 8 clickable flows (31 frames) with flow starting points | 31 |
 
-Totals: **81 storefront screens**, **31 admin screens**, **8 prototypes**.
+Totals: **81 storefront screens**, **32 admin screens**, **8 prototypes**.
 
 ## 2. Design system summary
 - **Variables (97):** Primitives (34, hidden), Color semantic (49 incl. logo-derived brand/* tokens), Spacing & Radius (14). Web code syntax `var(--omp-…)`.
@@ -43,6 +43,7 @@ Totals: **81 storefront screens**, **31 admin screens**, **8 prototypes**.
 | Printify / Printful as design references | 01 Research; hero value points, price estimator, numbered steps, category carousel |
 | Lottie for animation / preloading | Lottie Slot + Preloader components; slots in home, uploads, cart, confirmation, 404 |
 | Customer login = mobile + OTP only | Phone Field, OTP Input, AUTH-01…04 (desktop/mobile), checkout step 1, tracking, profile, admin settings |
+| Admin map view of order flow | AD-MAP-01 Order map & flow; mini map on overview; “Order map” in admin sidebar; Map Marker component |
 | Guided artwork upload with printable area per product | Print Area Guide set; guided step on all configurators; admin "Artwork slots & print areas" |
 
 ## 4. Prototype entry points (page 12 → Present)

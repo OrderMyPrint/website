@@ -53,3 +53,4 @@
 | F-42 | Customer sign-in by mobile number + OTP only | Low-friction, no passwords | OTP request/verify endpoints, rate limits, SMS provider adapter, DLT templates | SMS provider (D-25) | AUTH-01…04, CHK-01 | P3, P4, P6 | R1 |
 | F-43 | Guided artwork upload with print area guides per slot | Fewer artwork errors; clear expectations | `product_artwork_slots` config; guide renderer; templates per slot | F-09, F-11 | ART-06 | P3, P4, P5 | R1 |
 | F-44 | Responsive storefront incl. tablet (834) | Usable on every device | Breakpoints 390 / 834 / 1440 from design tokens | Design | — | P4 | R1 |
+| F-45 | Admin order map & flow view | See where orders are going and where they are stuck | Aggregations over orders/shipments by PIN → lat/lon; map provider adapter; flow counts from item states | Map provider + geocoding (D-27) | — | P5 | R1 |
