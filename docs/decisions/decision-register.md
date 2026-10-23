@@ -60,6 +60,7 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 | X-03 | INR, India, English (i18n-ready) | Master brief §1 |
 | X-04 | Seven product families in four categories; no packaging products | Master brief §2–3 |
 | X-05 | Server-authoritative, data-driven pricing with snapshots | Master brief §2 |
+| X-13 | Business phone number: **+91 63561 61761** (header utility bar, contact page, checkout help, footer/contact details) | Director, 2026-10-23 |
 | X-12 | Admin “Order map & flow”: map of order destinations by status with dispatch routes, by-state panel, exceptions, and an order-flow stage strip; mini map on the overview | Director, 2026-10-23 |
 | X-11 | Tablet (834 px) designs added alongside desktop and mobile | Director, 2026-10-23 |
 | X-10 | Guided artwork upload per product: one slot per side/panel/print location with printable area, bleed, safe area and no-print zones shown; templates per slot | Director, 2026-10-23 |
