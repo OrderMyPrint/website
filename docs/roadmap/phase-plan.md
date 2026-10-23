@@ -12,8 +12,8 @@ No phase is marked APPROVED or COMPLETED without evidence and the Director's exp
 
 | Phase | Name | Status | Gate / approval needed | Evidence |
 |---|---|---|---|---|
-| 0 | Discovery, audit & requirements | **READY FOR REVIEW** | **G0**: discovery scope + design direction (D-01, D-03) | `docs/discovery/phase-0-discovery-report.md` |
-| 1 | Figma design (editable file, components, prototypes) | NOT STARTED | **G1**: design approval before any UI implementation | — |
+| 0 | Discovery, audit & requirements | **COMPLETED** (G0 APPROVED 2026-10-23) | **G0**: discovery scope + design direction (D-01, D-03) | `docs/discovery/phase-0-discovery-report.md`, `docs/approvals/G0-discovery-approval.md` |
+| 1 | Figma design (editable file, components, prototypes) | **IN PROGRESS** (started 2026-10-23) | **G1**: design approval before any UI implementation | — |
 | 2 | Repository & architecture setup | NOT STARTED | **G2**: architecture + hosting (D-02, D-04, D-05) before repos are created | — |
 | 3 | Backend & data implementation | NOT STARTED | Follows G1 + G2 | — |
 | 4 | Storefront implementation | NOT STARTED | Follows G1 + G2 | — |

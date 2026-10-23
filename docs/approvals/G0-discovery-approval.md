@@ -4,7 +4,7 @@
 |---|---|
 | Gate | G0 (end of Phase 0) |
 | Requested | 2026-10-23 |
-| Status | **PENDING**, no approval received |
+| Status | **APPROVED** — 2026-10-23 |
 
 ## What is being approved
 
@@ -21,8 +21,10 @@
 
 | Item | Decision | By | Date |
 |---|---|---|---|
-| Discovery scope | — | — | — |
-| D-01 Brand | — | — | — |
-| D-03 Direction | — | — | — |
-| Proposed defaults D-11…D-20 | — | — | — |
-| Start Phase 1 | — | — | — |
+| Discovery scope | Approved | Director | 2026-10-23 |
+| D-01 Brand | Option (a): "Order My Print" + supplied OMP logo as working brand (interpreted from "brand A") | Director | 2026-10-23 |
+| D-03 Direction | Direction A "Ink & Paper" | Director | 2026-10-23 |
+| Proposed defaults D-11…D-20 | Accepted as proposed | Director | 2026-10-23 |
+| Start Phase 1 | Approved | Director | 2026-10-23 |
+
+Director's words (chat, 2026-10-23): "G0 approved, go with brand A and defaults".
