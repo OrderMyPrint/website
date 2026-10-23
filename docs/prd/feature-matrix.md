@@ -17,7 +17,7 @@
 | F-06 | Live price preview and tier table on PDP | Confidence; fewer quote requests for simple jobs | Debounced `POST /pricing/preview`; tier table from engine | F-04 | PRC-01 | P4 | R1 |
 | F-07 | Order snapshots (spec, price, tax, shipping, discounts) | Future price changes never alter orders | Immutable JSONB snapshot + normalised totals on `order_items` | F-04 | PRC-03 | P3 | R1 |
 | F-08 | Re-price cart at checkout with confirmation | Prevents stale prices | Engine re-run; diff shown; explicit confirm | F-04 | PRC-05 | P3, P4 | R1 |
-| F-09 | Artwork upload (PDF, PNG, JPEG, SVG) to private storage | Order without email back-and-forth | Pre-signed upload → object storage; confirm → job | Object storage (D-05) | ART-01 | P3, P4 | R1 |
+| F-09 | Artwork upload (PDF, PNG, JPEG, SVG, CDR) to private storage | Order without email back-and-forth | Pre-signed upload → object storage; confirm → job | Object storage (D-05) | ART-01 | P3, P4 | R1 |
 | F-10 | Malware scan + content validation + SVG sanitisation | Protects staff and systems | ClamAV daemon (requires VPS, D-02) or a scanning service; MIME sniffing; `sharp` and `pdf-lib`/`pdfjs` metadata; DOMPurify for SVG | Hosting (D-02) | ART-02 | P3 | R1 |
 | F-11 | Artwork versions + review (approve, revise, reject) | Fewer misprints; audit trail | `artwork_files` / `artwork_versions` / review events; admin viewer | F-09 | ART-03, ART-04 | P3, P5 | R1 |
 | F-12 | Cart (guest + user, merge) | Low-friction buying | Server-side carts keyed by user or opaque token | F-04 | CRT-01 | P3, P4 | R1 |
@@ -43,7 +43,7 @@
 | F-32 | SEO: SSR, structured data, sitemap | Organic acquisition | Next.js metadata API, JSON-LD | F-01 | — | P4 | R1 |
 | F-33 | Accessibility WCAG 2.2 AA | Inclusive; legal risk reduction | Design tokens with contrast; keyboard flows; axe in CI | Design | — | P1, P4, P5, P7 | R1 |
 | F-34 | Observability, backups, restore drill | Operability | Structured logs; error tracker; uptime checks; daily `pg_dump` + offsite copy; restore test | Hosting (D-02) | — | P2, P8 | R1 |
-| F-35 | AI/EPS ingestion | Designers' native files | Ghostscript-based conversion worker (non-Node runtime; needs approval) | VPS | ART-05 | — | L |
+| F-35 | AI/EPS ingestion and automatic CDR previews | Designers' native files | Ghostscript (AI/EPS) and libcdr via LibreOffice or Inkscape (CDR) conversion worker (non-Node runtimes; need approval) | VPS | ART-05 | — | L |
 | F-36 | Advanced preflight | Fewer misprints | Bleed, font and ICC checks | F-35 | ART-05 | — | L |
 | F-37 | Shipping aggregator integration | Automation | Provider adapter | D-06b | SHP-02 | P6+ | L |
 | F-38 | WhatsApp/SMS notifications | Higher engagement | Provider adapter, opt-in | Provider + consent | — | — | L |

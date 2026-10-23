@@ -60,6 +60,7 @@ This document covers behaviour and state machines. Screen-level detail lives in 
      - MIME sniffing and extension match;
      - page count and size for PDF;
      - pixel dimensions and effective DPI at the chosen size for raster files;
+     - CDR: format signature check only; no thumbnail; flagged "manual review in CorelDRAW";
      - SVG sanitisation (scripts, external refs and event handlers stripped).
    - **Thumbnail**: a preview image is generated.
 4. The UI shows each state: uploading → scanning → checks passed / warnings / failed.

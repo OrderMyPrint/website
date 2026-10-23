@@ -75,10 +75,11 @@ Acceptance criteria use Given / When / Then. Release: **R1** = MVP, **L** = late
 
 ## Artwork
 
-**ART-01 (R1).** As a shopper, I upload artwork in PDF, PNG, JPEG or SVG.
+**ART-01 (R1).** As a shopper, I upload artwork in PDF, PNG, JPEG, SVG or CorelDRAW (CDR).
 - Files over the configured limit are refused before upload.
 - Wrong types are refused after content sniffing, even if the extension is allowed.
 - SVGs are stored only after sanitisation.
+- CDR files are scanned and stored, show a "reviewed manually by our pre-press team" note instead of a preview, and the upload guidance names the supported CorelDRAW versions (D-24).
 
 **ART-02 (R1).** Uploaded files are scanned before anyone can download them.
 - Given a file is infected, then it is quarantined, the customer is told to upload a different file, and staff cannot download it.

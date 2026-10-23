@@ -113,6 +113,7 @@ The backend price is authoritative. Every order keeps an immutable snapshot of i
 - Supported uploads:
   - PDF, PNG and JPEG;
   - SVG, sanitised before storage;
+  - **CorelDRAW (CDR)** [C, Director 2026-10-23]: accepted, malware-scanned and stored privately. There is no automatic preview or content check, so pre-press staff review CDR files manually in CorelDRAW. Customers are encouraged to attach a PDF export too;
   - AI/EPS only when the processing pipeline reliably supports them (later phase [P]).
 - Configurable size limits.
 - Private storage.
@@ -178,7 +179,7 @@ The backend price is authoritative. Every order keeps an immutable snapshot of i
 
 ### Later phases [P]
 
-- AI/EPS ingestion and advanced preflight.
+- AI/EPS ingestion, automatic CDR previews and advanced preflight.
 - Online design editor.
 - Saved artwork library and one-click reorder.
 - WhatsApp and SMS notifications.

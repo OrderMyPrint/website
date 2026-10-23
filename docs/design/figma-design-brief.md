@@ -103,7 +103,7 @@ Admin (separate app): Overview · Catalogue · Pricing · Orders · Quotations �
 | SF-PLP-01 | All products / listing with filters | ✓ | ✓ (filter drawer) | no results, loading |
 | SF-SRCH-01 | Search results + predictive search dropdown | ✓ | ✓ | no results |
 | SF-PDP-01…07 | Product detail + configurator (one per product family) | ✓ | ✓ | invalid combo, over-threshold → quote CTA, loading price |
-| SF-ART-01 | Artwork upload component in PDP and order (uploading, scanning, passed, warning, failed, infected, too large, wrong type) | ✓ | ✓ | all |
+| SF-ART-01 | Artwork upload component in PDP and order (uploading, scanning, passed, warning, failed, infected, too large, wrong type, CDR accepted for manual review) | ✓ | ✓ | all |
 | SF-PRICE-01 | Price breakdown + tier table (expanded/collapsed) | ✓ | ✓ (sticky bar + sheet) | — |
 | SF-CART-01 | Cart | ✓ | ✓ | empty, price-changed notice, artwork pending, coupon invalid |
 | SF-CHK-01…04 | Checkout: contact → address & GST → delivery → review | ✓ | ✓ | validation errors |

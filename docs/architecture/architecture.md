@@ -53,7 +53,7 @@
 | Queue | **pg-boss** (on PostgreSQL) | No Redis needed for R1; transactional enqueue | BullMQ + Redis/Valkey (add later if throughput demands it) |
 | Object storage | S3-compatible private bucket (D-05) | Pre-signed upload/download; lifecycle rules | VPS local disk (backup risk) |
 | Malware scan | ClamAV (`clamd`) on the VPS | Free; no file leaves our infrastructure | Commercial scanning API (per-file cost) |
-| File inspection | `sharp` (raster), `pdf-lib` / `pdfjs-dist` (PDF), DOMPurify + jsdom (SVG) | Node-native | Ghostscript (non-Node; later for AI/EPS) |
+| File inspection | `sharp` (raster), `pdf-lib` / `pdfjs-dist` (PDF), DOMPurify + jsdom (SVG) | Node-native | Ghostscript (non-Node; later for AI/EPS); LibreOffice/Inkscape (non-Node; later for CDR previews) |
 | PDFs (invoice, quote, job card) | `@react-pdf/renderer` | Node-only, templated in React | Headless Chrome / Gotenberg (heavy) |
 | Auth | Session cookies (httpOnly, Secure, SameSite=Lax), Argon2id, TOTP for staff; library pick (e.g. Better Auth) in Phase 2 ADR | No tokens in JS; staff step-up | JWT in localStorage (rejected) |
 | Payments | Provider adapter; provider chosen in Phase 6 (D-06) | Swap without touching order logic | — |
@@ -166,7 +166,7 @@ Conventions:
 | Risk | Mitigation |
 |---|---|
 | Pricing engine complexity | Start each product with a matrix model; add formula components where needed; golden-file tests per product |
-| Artwork processing cost and security | Strict type list in R1; scan before access; AI/EPS deferred |
+| Artwork processing cost and security | Strict type list in R1; scan before access; CDR reviewed manually in CorelDRAW; AI/EPS and CDR previews deferred |
 | Hosting ops burden on a VPS | Infrastructure-as-scripts; unattended security upgrades; backup + restore drill before launch |
 | Missing business data blocks launch | Track D-08/D-09 from Phase 1; demo data clearly marked |
 | Payment edge cases | Webhook + reconciliation; idempotency tests in Phase 7 |

@@ -46,6 +46,7 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 | D-21 | Domain / subdomains | Phase 8 | Not chosen; nothing registered |
 | D-22 | Invoice point (on payment vs on dispatch), numbering series, e-invoicing applicability | Phase 3 | CA |
 | D-23 | Price-hold window for carts | Phase 3 | e.g. 24 h |
+| D-24 | CorelDRAW version(s) used by pre-press | Phase 1 | Sets which CDR versions the upload guidance says are supported |
 
 ## Decided
 
@@ -56,4 +57,5 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 | X-03 | INR, India, English (i18n-ready) | Master brief §1 |
 | X-04 | Seven product families in four categories; no packaging products | Master brief §2–3 |
 | X-05 | Server-authoritative, data-driven pricing with snapshots | Master brief §2 |
+| X-07 | Accept CorelDRAW (CDR) artwork uploads; manual pre-press review in R1 | Director, 2026-10-23 |
 | X-06 | Git remote `https://github.com/OrderMyPrint/website.git` connected to `/Users/rutvijpatel/OrderMyPrint` | Director instruction, 2026-10-23 |
