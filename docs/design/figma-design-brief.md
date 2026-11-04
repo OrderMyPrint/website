@@ -127,6 +127,9 @@ Admin (separate app): Overview · Catalogue · Pricing · Orders · Quotations �
 | SF-HELP-04 | Artwork guidelines | ✓ | ✓ | — |
 | SF-ERR-01 | 404 / 500 | ✓ | ✓ | — |
 
+### 6.1a Storefront overlays (added in the 2026-11-04 UX audit)
+SF-CONSENT-01/02 (cookie banner, preferences) · SF-TRK-02 (tracking OTP) · SF-PDP-07b (size guide) · SF-PDP-01c-M (price breakdown sheet) · SF-CART-03 (remove item) · SF-CHK-02b (address modal) · SF-QUO-01b (quote OTP) · SF-ACC-06d (decline quote) · SF-ACC-03b (order help) · SF-ACC-04b (revision received) · SF-ACC-04c (cancel item) · SF-ACC-07b/c/d (add address, invite member, change number). The `-M` suffix marks the mobile sheet version. Full list: `ux-audit-2026-11-04.md` §3.
+
 ### 6.2 Admin (`AD-`, desktop 1440; responsive check at 1024)
 
 | ID | Screen |
@@ -155,6 +158,8 @@ Admin (separate app): Overview · Catalogue · Pricing · Orders · Quotations �
 | AD-SET-01 | Settings (business details, policies, notification templates, limits) |
 | AD-AUD-01 | Audit log |
 
+Admin overlays (2026-11-04): AD-ORD-02b/c (cancel, hold) · AD-PRC-02b (publish version) · AD-QC-01b (QC fail) · AD-PAY-02b (reject refund) · AD-STF-01b (invite staff) · AD-CPN-01b (new coupon drawer) · AD-CAT-04b (add rule) · AD-SHP-02b (mark dispatched) · AD-ART-02b (approve → job) · AD-QUO-02b (send revision).
+
 ## 7. Component inventory (`03 — Components`)
 
 | Group | Components |
@@ -174,13 +179,13 @@ All components use Auto Layout and variables, with names in the form `Category/C
 
 ## 8. Prototype flows (`12 — Prototypes & User Flows`)
 
-1. Home → product → configuration → artwork upload → cart
-2. Cart → checkout → payment success / failure
-3. Bulk enquiry → quotation review → customer acceptance
-4. Customer dashboard → order tracking
-5. Admin → quotation → order creation
-6. Admin → artwork approval → production job
-7. Admin → dispatch → tracking update
+There are 13 flows, P0–P12. The list and paths are in `ux-audit-2026-11-04.md` §4. They cover:
+- the seven journeys required by the brief: shop, checkout, quote, account, admin quote, artwork → production, dispatch;
+- consent;
+- sign-in;
+- public tracking;
+- admin pricing, finance and staff dialogs;
+- a full mobile purchase.
 
 ## 9. Responsive rules
 

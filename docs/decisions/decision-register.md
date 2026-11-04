@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Updated | 2026-10-23 |
+| Updated | 2026-11-04 |
 
 Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommended, awaiting confirmation) · **DECIDED** (with source).
 
@@ -49,7 +49,8 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 | D-25 | SMS provider for OTP (+ TRAI DLT sender ID and template registration) | Phase 6 | Required for launch; compare cost, delivery rates, DLT support. **None selected** |
 | D-26 | Lottie animations: custom brand animations vs licensed library assets | Phase 4 | Slots marked in Figma; licences recorded per asset |
 | D-27 | Map provider for the admin Order map (must render India's official boundaries; e.g. an India-compliant tile provider) + PIN-code geocoding source | Phase 5 | Cost and licence to compare; nothing selected |
-| D-24 | CorelDRAW version(s) used by pre-press | Phase 1 | Sets which CDR versions the upload guidance says are supported |
+| D-24 | CorelDRAW version(s) used by pre-press | Phase 1 | Sets which CDR versions the upload guidance says are supported. Design copy currently says **CorelDRAW X7 or later**; confirm |
+| D-28 | GST treatment: rates per product (design uses 18% printed products, 5% T-shirts) and GST on delivery charges (design applies the items' rate to delivery as part of the supply) | Before UAT (Phase 7) | CA to confirm; affects cart, checkout, invoices and quotes |
 
 ## Decided
 
@@ -60,6 +61,8 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 | X-03 | INR, India, English (i18n-ready) | Master brief §1 |
 | X-04 | Seven product families in four categories; no packaging products | Master brief §2–3 |
 | X-05 | Server-authoritative, data-driven pricing with snapshots | Master brief §2 |
+| X-14 | No DEMO copy in designs: SEO-ready real copy; **researched market reference prices**, industry-standard options, India-wide delivery, typical turnaround ranges (final values still need business confirmation under D-08) | Director, Phase 1 |
+| X-15 | UX audit: every action that needs a decision, form or confirmation has a designed dialog, sheet or drawer (36 added); prices reconciled end to end | Director, 2026-11-04 (`../design/ux-audit-2026-11-04.md`) |
 | X-13 | Business phone number: **+91 63561 61761** (header utility bar, contact page, checkout help, footer/contact details) | Director, 2026-10-23 |
 | X-12 | Admin “Order map & flow”: map of order destinations by status with dispatch routes, by-state panel, exceptions, and an order-flow stage strip; mini map on the overview | Director, 2026-10-23 |
 | X-11 | Tablet (834 px) designs added alongside desktop and mobile | Director, 2026-10-23 |

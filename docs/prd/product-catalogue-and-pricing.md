@@ -5,7 +5,7 @@
 | Status | **READY FOR REVIEW** (Phase 0 proposal) |
 | Date | 2026-10-23 |
 
-> **Data policy.** This document defines *structure*: which options each product exposes and how the engine computes a price. It contains **no real prices, costs, MOQs, materials availability, tax rates or turnaround commitments**. Values in Figma prototypes are fictitious, marked **DEMO**, and replaced with business-approved data before launch.
+> **Data policy.** This document defines *structure*: which options each product exposes and how the engine computes a price. It contains **no real prices, costs, MOQs, materials availability, tax rates or turnaround commitments**. Figma now shows researched market reference values (§5, X-14); they are replaced with business-approved data before launch (D-08).
 
 Status markers used below:
 
@@ -215,8 +215,20 @@ The admin **price preview** runs the same engine on any configuration and shows 
 - A configurable **price-hold window** (e.g. 24 h) is Undecided [Q].
 - Accepted quotations carry their own price and validity date and are not re-priced.
 
-## 5. Demo-data policy for Figma
+## 5. Figma reference data (replaces the earlier demo-data policy)
 
-- Use round, obviously fictitious amounts (e.g. ₹1,234.00), labelled with a small **DEMO** badge on price components in prototype frames.
-- Use generic material names ("Premium Matte 350 GSM — DEMO") unless the business supplies real ones.
-- Use no turnaround promises; use the placeholder "Production time shown here".
+The Director asked for no DEMO content (X-14). Figma therefore shows **researched market reference prices** for India. These are design data, not approved business prices. The business must confirm or replace them before UAT (D-08), and the CA must confirm GST (D-28).
+
+| Product | Tiers (qty → unit · total, excl. GST) | Option prices shown | Ready to ship |
+|---|---|---|---|
+| Visiting Cards | 100 → ₹3.99 · ₹399 · 250 → ₹2.60 · ₹649 · 500 → ₹1.80 · ₹899 · 1,000 → ₹1.50 · ₹1,499 · 2,500 → ₹1.30 · ₹3,249 | Premium Matte 350 +₹120 · Linen +₹220 · Kraft +₹180 · double-sided +₹180 · matte lam. +₹120 · soft-touch +₹200 · rounded corners +₹0.20/card (prices shown for 500) | 2–3 working days |
+| Letter Pads | 10 → ₹165 · 15 → ₹150 · 20 → ₹140 · 50 → ₹118 · 100 → ₹99 (per pad) | Premium 100 GSM +₹10/pad · Textured 120 +₹18/pad · 100 sheets +₹60/pad · colour both sides +₹25/pad | 3–4 |
+| Envelopes | 100 → ₹6.00 · 250 → ₹4.20 · 500 → ₹3.10 · 1,000 → ₹2.60 · 2,500 → ₹2.20 | White 120 +₹0.40 · Kraft 120 +₹0.60 · peel & seal +₹0.50 · front + flap +₹0.80 (each) | 3–4 |
+| Brochures | 250 → ₹18 · 500 → ₹12.50 · 1,000 → ₹8.90 · 2,500 → ₹6.40 · 5,000 → ₹5.20 | 170 matte +₹0.60 · 250 silk +₹1.40 · matte lam. +₹1.20 · gloss lam. +₹1.00 (each) | 3–5 |
+| Stickers (50 × 50 mm) | 100 → ₹4.50 · 250 → ₹2.60 · 500 → ₹1.90 · 1,000 → ₹1.40 · 5,000 → ₹0.95 | vinyl +₹0.30 · transparent +₹0.40 · die-cut singles +₹0.50 (each) | 3–4 |
+| DTF Stickers (22 × 48 in sheet) | 1 → ₹449 · 2 → ₹419 · 3 → ₹399 · 5 → ₹369 · 10 → ₹339 | 22×24 ₹249 · 22×120 ₹999 · custom ₹10/inch · glitter +₹60 · glow +₹80 · arrange for me ₹99/sheet | 1–2 |
+| Corporate T-Shirts | 25 → ₹349 · 50 → ₹319 · 80 → ₹299 · 150 → ₹279 · 300+ → quote | poly-cotton +₹30/pc · 2XL+ +₹30/pc · back print ₹40/pc · screens ₹300 each | 5–7 |
+
+**Delivery shown:** Standard ₹99 (4–6 working days after dispatch) and Express ₹199 (2–3 working days after dispatch). There is no pickup option.
+
+**Reference cart:** VC 500 (₹1,400) + Stickers 500 (₹1,100) = ₹2,500 · PRINT10 −₹250 · delivery ₹99 · GST 18% ₹422.82 · **₹2,771.82**.
