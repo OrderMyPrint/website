@@ -13,8 +13,8 @@ No phase is marked APPROVED or COMPLETED without evidence and the Director's exp
 | Phase | Name | Status | Gate / approval needed | Evidence |
 |---|---|---|---|---|
 | 0 | Discovery, audit & requirements | **COMPLETED** (G0 APPROVED 2026-10-23) | **G0**: discovery scope + design direction (D-01, D-03) | `docs/discovery/phase-0-discovery-report.md`, `docs/approvals/G0-discovery-approval.md` |
-| 1 | Figma design (editable file, components, prototypes) | **READY FOR REVIEW** (2026-10-23) | **G1**: design approval before any UI implementation | `docs/design/phase-1-handoff.md`, `docs/approvals/G1-design-approval.md`, [Figma](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy) |
-| 2 | Repository & architecture setup | NOT STARTED | **G2**: architecture + hosting (D-02, D-04, D-05) before repos are created | — |
+| 1 | Figma design (editable file, components, prototypes) | **COMPLETED** (G1 APPROVED 2026-11-04) | **G1**: design approval before any UI implementation | `docs/design/phase-1-handoff.md`, `docs/approvals/G1-design-approval.md`, [Figma](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy) |
+| 2 | Repository & architecture setup | NOT STARTED (next; blocked on G2 decisions) | **G2**: architecture + hosting (D-02, D-04, D-05) before repos are created. Director uses **Vercel** today (2026-11-04); hosting options updated in `architecture.md` §6 | — |
 | 3 | Backend & data implementation | NOT STARTED | Follows G1 + G2 | — |
 | 4 | Storefront implementation | NOT STARTED | Follows G1 + G2 | — |
 | 5 | Admin implementation | NOT STARTED | Follows G1 + G2 | — |

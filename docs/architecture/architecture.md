@@ -129,6 +129,16 @@ Facts observed on 2026-10-23 via the connected Hostinger account (read-only):
 | B. Existing Cloud Professional | Storefront + API as managed Node apps, MySQL, external scanning API | No new hosting spend until expiry | No PostgreSQL (brief prefers it); no ClamAV; shared with ~20 unrelated sites; Node app slots partly used; plan expires 2027-02-12 and is non-renewing |
 | C. Managed cloud services (managed PostgreSQL + app platform + S3) | e.g. separate managed DB and app hosting | Less ops | Several vendors and bills; data residency and pricing to verify; more integration work |
 
+| D. Vercel (Director currently uses Vercel, noted 2026-11-04) | Next.js storefront and admin SPA on Vercel. The API is either on Vercel Functions or on a small separate server. Managed PostgreSQL (e.g. via the Vercel Marketplace) and object storage | Very good fit for Next.js: previews per branch, CDN, zero server patching for the frontends | Serverless functions cannot run ClamAV or long-running pg-boss workers. Those need another runtime (a small VPS or a container host), or a hosted virus-scanning API instead of ClamAV. Several bills; usage-based pricing and plan limits to check for a commercial site; India data-residency to verify |
+
+**Vercel account check (read-only, 2026-11-04):** the connected account has 3 unrelated projects and no Order My Print project. Nothing has been created or changed.
+
+A likely shape for D is a hybrid:
+- Vercel hosts the storefront and admin.
+- One small VPS runs the API, workers, PostgreSQL and ClamAV.
+
+D (hybrid) and A both meet the brief. This is decided at G2.
+
 **Hostinger VPS list prices** (Hostinger billing catalogue API, 2026-10-23, INR, **excluding** any applicable GST, first-period promotional price in brackets):
 
 | Plan | Specs | Monthly | Yearly | 2-yearly |

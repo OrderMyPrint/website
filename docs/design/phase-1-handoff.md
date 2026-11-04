@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Status | **READY FOR REVIEW** — awaiting G1 design approval |
+| Status | **APPROVED** — G1, 2026-11-04 (`docs/approvals/G1-design-approval.md`) |
 | Date | 2026-10-23 · updated 2026-11-04 (UX audit — see `ux-audit-2026-11-04.md`) |
 | Figma file | [Order My Print — Platform Design (Phase 1)](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy) (team: Digitech Miner's team) |
 | Direction | A "Ink & Paper"; palette derived from the supplied OMP logo |
