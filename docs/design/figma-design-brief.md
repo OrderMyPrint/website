@@ -157,6 +157,9 @@ SF-CONSENT-01/02 (cookie banner, preferences) · SF-TRK-02 (tracking OTP) · SF-
 | AD-STF-01 | Staff, roles and permissions |
 | AD-SET-01 | Settings (business details, policies, notification templates, limits) |
 | AD-AUD-01 | Audit log |
+| AD-WEB-01…06 | Website content: pages, page editor (sections, SEO, versions), navigation & footer, media library, FAQ, site settings (added 2026-11-05, `admin-audit-2026-11-05.md`) |
+| AD-STF-02 / 03 | Role editor (module-grouped permissions) · Staff member (role, 2FA reset, sessions, deactivate) (added 2026-11-05) |
+| AD-ERR-01 | Access denied (403) and the permission-driven sidebar rule (added 2026-11-05) |
 
 Admin overlays (2026-11-04): AD-ORD-02b/c (cancel, hold) · AD-PRC-02b (publish version) · AD-QC-01b (QC fail) · AD-PAY-02b (reject refund) · AD-STF-01b (invite staff) · AD-CPN-01b (new coupon drawer) · AD-CAT-04b (add rule) · AD-SHP-02b (mark dispatched) · AD-ART-02b (approve → job) · AD-QUO-02b (send revision).
 
