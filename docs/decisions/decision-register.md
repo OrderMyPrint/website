@@ -13,9 +13,9 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 | ID | Decision | Options | Recommendation | Needed by | Status |
 |---|---|---|---|---|---|
 | **D-01** | Brand identity for the design | (a) Use **"Order My Print" + the supplied OMP logo** as the working brand in Figma; (b) neutral placeholder brand as the brief says | **(a)**. The brief's project name is Order My Print and a logo was supplied on 2026-10-23. Treated as *working brand*, not final. Domain stays undecided and nothing is registered. A **vector master (SVG/AI/PDF)** of the logo is needed for production; the supplied file is a 1024 px JPEG on a paper texture | Phase 1 | DECIDED (G0, 2026-10-23) |
-| **D-02** | Hosting and database | A: new Hostinger KVM 2 VPS (PostgreSQL, ClamAV, workers) · B: existing Cloud Professional (MySQL, no ClamAV, shared, expires 2027-02-12) · C: managed cloud services · **D: Vercel** (Director currently uses Vercel, 2026-11-04) for the storefront and admin, plus a separate home for the API workers, PostgreSQL and ClamAV | **Under review.** A was recommended before Vercel came up; `architecture.md` §6 now compares D. A Vercel-only setup cannot run ClamAV or long-running workers. List price ₹2,099/month or ₹16,788/year (₹11,148 first year), GST extra. See `architecture.md` §6. **No purchase until approved.** Design (Phase 1) can proceed before this is decided | Phase 2 | OPEN |
+| **D-02** | Hosting and database | A: new Hostinger KVM 2 VPS (PostgreSQL, ClamAV, workers) · B: existing Cloud Professional (MySQL, no ClamAV, shared, expires 2027-02-12) · C: managed cloud services · **D: Vercel** (Director currently uses Vercel, 2026-11-04) for the storefront and admin, plus a separate home for the API workers, PostgreSQL and ClamAV | **Under review.** A was recommended before Vercel came up; `architecture.md` §6 now compares D. A Vercel-only setup cannot run ClamAV or long-running workers. List price ₹2,099/month or ₹16,788/year (₹11,148 first year), GST extra. See `architecture.md` §6. **No purchase until approved.** Design (Phase 1) can proceed before this is decided | Phase 2 | **DECIDED (G2, 2026-11-05)**: Vercel for storefront, admin and API; managed PostgreSQL; no purchase yet (`docs/approvals/G2-architecture-approval.md`) |
 | **D-03** | Design direction | Direction A "Ink & Paper" · Direction B "Studio Bold" (see `../design/figma-design-brief.md` §3) | **A** | Phase 1 | DECIDED (G0, 2026-10-23) |
-| **D-04** | Repository names and the existing `website` repo | Keep `website` as the docs/architecture repo, app repos `omp-storefront`, `omp-admin`, `omp-api`, `omp-design-system` · or the brief's `custom-printing-*` names | `omp-*` names (short, brand-aligned). Keep `website` for docs; optional rename to `omp-architecture` later | Phase 2 | OPEN |
+| **D-04** | Repository names and the existing `website` repo | Keep `website` as the docs/architecture repo, app repos `omp-storefront`, `omp-admin`, `omp-api`, `omp-design-system` · or the brief's `custom-printing-*` names | `omp-*` names (short, brand-aligned). Keep `website` for docs; optional rename to `omp-architecture` later | Phase 2 | **DECIDED (G2, 2026-11-05)**: `omp-*` multi-repo; `omp-api` created **public**; `website` and `omp-storefront` stay public (exception to "all private") |
 
 ## Proposed defaults (confirm or override; not blocking)
 
@@ -36,13 +36,14 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 
 | ID | Decision | Needed by | Notes |
 |---|---|---|---|
-| D-05 | Object storage provider | Phase 2 | Compare VPS disk + offsite backup, Cloudflare R2, India-region S3-compatible |
+| D-05 | Object storage provider | Before staging | Hosting is Vercel (G2). Candidates: Vercel Blob, Cloudflare R2, India-region S3-compatible. Dev uses a local-disk adapter |
+| D-29 | Hosted malware-scanning service for artwork (ClamAV cannot run on Vercel) | Before artwork uploads go live | New at G2 (2026-11-05). Compare hosted ClamAV/scanning APIs on cost, India data handling and file-size limits |
 | D-06 | Payment gateway | Phase 6 | Compare Razorpay, Cashfree, PayU (and others) on the brief's criteria. **None selected** |
 | D-06b | Shipping approach | Phase 6 | R1 = manual AWB entry; aggregator later |
 | D-07 | Transactional email provider | Phase 6 | — |
 | D-08 | Real business data: materials, GSM, sizes, MOQs, prices or cost rates, turnaround, HSN/SAC and GST rates | Before UAT (Phase 7) | Business + CA |
 | D-09 | Policies: refund/cancellation, shipping, privacy, terms, grievance officer details, artwork retention period | Before UAT | Business + legal |
-| D-10 | Error tracking: self-hosted vs SaaS | Phase 2 | Cost/benefit |
+| D-10 | Error tracking: self-hosted vs SaaS | Before staging | SaaS fits Vercel hosting; cost/benefit |
 | D-21 | Domain / subdomains | Phase 8 | Not chosen; nothing registered |
 | D-22 | Invoice point (on payment vs on dispatch), numbering series, e-invoicing applicability | Phase 3 | CA |
 | D-23 | Price-hold window for carts | Phase 3 | e.g. 24 h |

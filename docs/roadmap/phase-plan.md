@@ -14,8 +14,8 @@ No phase is marked APPROVED or COMPLETED without evidence and the Director's exp
 |---|---|---|---|---|
 | 0 | Discovery, audit & requirements | **COMPLETED** (G0 APPROVED 2026-10-23) | **G0**: discovery scope + design direction (D-01, D-03) | `docs/discovery/phase-0-discovery-report.md`, `docs/approvals/G0-discovery-approval.md` |
 | 1 | Figma design (editable file, components, prototypes) | **COMPLETED** (G1 APPROVED 2026-11-04) | **G1**: design approval before any UI implementation | `docs/design/phase-1-handoff.md`, `docs/approvals/G1-design-approval.md`, [Figma](https://www.figma.com/design/9O88DWSEv7qCKPYOn5GwZy) |
-| 2 | Repository & architecture setup | IN PROGRESS — storefront repo [`OrderMyPrint/omp-storefront`](https://github.com/OrderMyPrint/omp-storefront) created on the Director's instruction (Next.js 15, CI); G2 decisions still to be recorded | **G2**: architecture + hosting (D-02, D-04, D-05) before repos are created. Director uses **Vercel** today (2026-11-04); hosting options updated in `architecture.md` §6 | — |
-| 3 | Backend & data implementation | NOT STARTED | Follows G1 + G2 | — |
+| 2 | Repository & architecture setup | **COMPLETED** (G2 APPROVED 2026-11-05) — Vercel for all apps, PostgreSQL, `omp-*` public repos; D-05 storage, D-29 scanning, D-10 errors open | **G2** | `docs/approvals/G2-architecture-approval.md` |
+| 3 | Backend & data implementation | IN PROGRESS (started 2026-11-05) — `OrderMyPrint/omp-api`: catalogue, pricing engine first | Follows G1 + G2 | `omp-api` |
 | 4 | Storefront implementation | IN PROGRESS — front end for all Phase 1 storefront screens built ahead of the API on the Director's instruction (2026-11-05); prices are browser estimates and forms show a "not open yet" notice until Phase 3 | Follows G1 + G2; needs the Phase 3 API before checkout, sign-in, quotes and tracking work | `omp-storefront` README, commit `24214c1` |
 | 5 | Admin implementation | NOT STARTED | Follows G1 + G2 | — |
 | 6 | Payments, shipping & integrations | NOT STARTED | **G6**: provider selections (D-06, D-06b, D-07) | — |

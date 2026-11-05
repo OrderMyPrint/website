@@ -114,6 +114,8 @@ Secrets live in environment configuration on the host. `.env.example` is committ
 
 ## 6. Hosting options (decision D-02)
 
+> **Decided at G2 (2026-11-05):** everything on **Vercel** for now — storefront, admin and the NestJS API as Vercel Functions — with managed PostgreSQL. ClamAV and pg-boss workers are replaced by a hosted scanning API (D-29) and Vercel Cron–driven job processing. See `../approvals/G2-architecture-approval.md`. The options below are kept for the record.
+
 Facts observed on 2026-10-23 via the connected Hostinger account (read-only):
 
 - The account has **Cloud Professional** (order `51918579`). It hosts ~20 existing sites (Digitech Miner staging/temp Node apps and client WordPress sites). Its subscription shows **non-renewing, expiring 2027-02-12**.
