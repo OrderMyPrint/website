@@ -39,3 +39,13 @@ If the Director wants free-form layouts (columns, arbitrary widgets, custom CSS)
 1. Approve the section-based approach (D-30), or require free-form layouts?
 2. Tablet visibility switch: needed, or desktop + mobile only?
 3. Scheduled publishing (publish at a date/time) for campaign pages: needed in R1?
+
+## Implemented (2026-11-10)
+
+| Repo | Commit | What |
+| --- | --- | --- |
+| omp-api | `fdfb7e4` | Section `style` presets + `devices` visibility in the content schema; `POST /admin/content/pages/:id/render` (unsaved document for the canvas); `GET /admin/content/pages/:id/review` (changes + publish blockers); autosave audited at most once per 10 min per editor and page; 3 e2e tests |
+| omp-storefront | `fb8ddfb` | Preset CSS (brand tokens only) and per-device hiding; shared `HomeSections`; `/editor-preview` canvas (postMessage only from allowed admin origins, `frame-ancestors` limited to the admin, noindex, no-store); in-page editing markers on hero and section headings |
+| omp-admin | `14a7eab` | `/website/editor/:id`: top bar, device preview, canvas bridge, Navigator (drag reorder, hide), Add section library, Content/Style/Visibility tabs, link and image pickers, autosave, undo/redo (⌘Z), version restore, Preview mode, publish review; entry links on Website content |
+
+Notes: sections are added by click (or the canvas "Add section" buttons) — dragging tiles straight onto the canvas is not in this release. Typing on the page covers the hero and every section heading/overline/lead; other text is edited in the panel.
