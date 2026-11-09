@@ -158,6 +158,7 @@ SF-CONSENT-01/02 (cookie banner, preferences) · SF-TRK-02 (tracking OTP) · SF-
 | AD-SET-01 | Settings (business details, policies, notification templates, limits) |
 | AD-AUD-01 | Audit log |
 | AD-WEB-01…06 | Website content: pages, page editor (sections, SEO, versions), navigation & footer, media library, FAQ, site settings (added 2026-11-05, `admin-audit-2026-11-05.md`) |
+| AD-WEB-07…11 | Visual page editor: section selected, add section (drag & drop), inline text edit + style presets, mobile preview + navigator, publish review (added 2026-11-09, `visual-editor-2026-11-09.md`; awaiting Director review) |
 | AD-STF-02 / 03 | Role editor (module-grouped permissions) · Staff member (role, 2FA reset, sessions, deactivate) (added 2026-11-05) |
 | AD-ERR-01 | Access denied (403) and the permission-driven sidebar rule (added 2026-11-05) |
 
