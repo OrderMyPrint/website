@@ -38,7 +38,7 @@ Status values: **OPEN** (needs the Director) · **PROPOSED** (default recommende
 |---|---|---|---|
 | D-05 | Object storage provider | Before staging | Hosting is Vercel (G2). Candidates: Vercel Blob, Cloudflare R2, India-region S3-compatible. Dev uses a local-disk adapter |
 | D-29 | Hosted malware-scanning service for artwork (ClamAV cannot run on Vercel) | Before artwork uploads go live | New at G2 (2026-11-05). Compare hosted ClamAV/scanning APIs on cost, India data handling and file-size limits |
-| D-30 | Visual page editor model: typed brand sections with style presets (PROPOSED) vs free-form widgets + custom CSS | Before visual editor implementation | Proposed 2026-11-09 with AD-WEB-07…11 (`docs/design/visual-editor-2026-11-09.md`). Recommendation: typed sections — on-brand, accessible, no HTML/CSS injection |
+| D-30 | Visual page editor model | — | **DECIDED 2026-11-09 (Director):** typed brand sections with style presets; per-device visibility incl. tablet; no scheduled publishing. `docs/approvals/visual-editor-design-approval.md` |
 | D-06 | Payment gateway | Phase 6 | Compare Razorpay, Cashfree, PayU (and others) on the brief's criteria. **None selected** |
 | D-06b | Shipping approach | Phase 6 | R1 = manual AWB entry; aggregator later |
 | D-07 | Transactional email provider | Phase 6 | — |

@@ -1,6 +1,6 @@
 # Visual page editor — design for review (2026-11-09)
 
-**Status:** READY FOR DIRECTOR REVIEW. Design only; nothing is implemented until approved (DESIGN FIRST gate).
+**Status:** APPROVED 2026-11-09 — section-based, tablet included, no scheduling (`docs/approvals/visual-editor-design-approval.md`). Implementation started.
 **Request (Director, 2026-11-09):** "design the website editor of same as elementor, but before implementing it make the figma design of it for the omp-admin panel — a visual editor for editing the overall website pages."
 **Figma:** file `9O88DWSEv7qCKPYOn5GwZy`, page **11 — Admin Operations**, row "Visual page editor (design 2026-11-09)" below AD-WEB-01…06.
 
