@@ -5,10 +5,13 @@ master `../supplied/omp-logo-supplied-2026-10-23.jpg`, which stays unchanged byt
 
 | File | What it is |
 | --- | --- |
-| `omp-logo-transparent.png` | Full logo with tagline, paper background removed (PNG with alpha) |
-| `omp-logo-compact-transparent.png` | Mark + wordmark (no tagline), used by the storefront and admin |
+| `omp-logo-transparent.png` | Full logo with tagline (770×391), paper background removed (PNG with alpha) |
+| `omp-logo-compact-transparent.png` | Mark + wordmark, no tagline (770×347), used by the storefront and admin |
+| `omp-logo-mark-transparent.png` | OMP mark only (590×239) |
 | `cutout.cjs` | The script that made them: colour-to-alpha against the paper colour, so edges stay smooth and the paper texture drops out. Nothing is redrawn or recoloured |
 
 Use on light backgrounds. The wordmark is navy, so on dark backgrounds place the logo on a light plate
 (as the storefront footer and admin sidebar do) until a light/reversed version is supplied.
 Replace these when the vector master arrives.
+
+Figma: the `Logo` component set (Lockup / Compact / Mark) uses these three files (fit, not cropped) since 2026-11-09; every instance follows it.

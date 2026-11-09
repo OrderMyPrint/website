@@ -16,7 +16,7 @@
 - the wordmark "ORDER MY PRINT" in a geometric sans, navy;
 - the tagline "PREMIUM & PROFESSIONAL PRINTING".
 
-**Brand status:** working brand pending D-01. The logo is used **as supplied, never redrawn or recoloured**. A vector master is requested. Until then, Figma uses the supplied raster on light backgrounds only.
+**Brand status:** working brand pending D-01. The logo is used **as supplied, never redrawn or recoloured**. A vector master is requested. Until then, Figma and the apps use transparent versions cut from the supplied raster (`docs/brand/derived/`, Director request 2026-11-09; the master is unchanged), on light backgrounds or a light plate only.
 
 **Colours sampled from the supplied file** (approximate, JPEG):
 
